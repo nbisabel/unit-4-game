@@ -20,7 +20,7 @@ gemBtn.append(".userScore");*/
 //declare that the buttons bring random numbers every time you press them 
 
 //var gemBtn = $(".gemButtons");
-var randomGemNumber;
+var randomGemNumber = [];
 var compScore;
 var usersScore;
 var win;
@@ -38,45 +38,26 @@ var crystal = $(".gemButton");
         "class": 'crystals',
         "data-random": randomGemNumber
     });
+$(".gemButton").append(crystal);
 
-$("#plain").on("click", function(){
-var randomGemNumber = Math.floor(Math.random() *11) +1;
-    $("#plain").html(randomGemNumber);
+
+$(".crystals").on("click", function(){
+let randomGemNumber = (Math.floor(Math.random() *11) +1);
+   $(".crystals").html(randomGemNumber);
     console.log(randomGemNumber);
 })
 
-$("#yellow").on("click", function(){
-    var randomGemNumber = Math.floor(Math.random() *11) +1;
-        $("#yellow").html(randomGemNumber);
-        console.log(randomGemNumber);
-    })
-$("#blue").on("click", function(){
-    var randomGemNumber = Math.floor(Math.random() *11) +1;
-        $("#blue").html(randomGemNumber);
-        console.log(randomGemNumber);
-    })
+crystal = parseInt(crystal);
+randomGemNumber = parseInt(randomGemNumber);
 
-$("#red").on("click", function(){
-    var randomGemNumber = Math.floor(Math.random() *11) +1;
-        $("#red").html(randomGemNumber);
-        var num = $(this).attr('data-random');
-        console.log(typeof num);
-    })
+$(".userScore").text(randomGemNumber);
 
-    randomGemNumber = parseInt(randomGemNumber);
+if (usersScore === compScore)
+    wins++;
+
+if  (usersScore === !compScore)
+    loss++;
     
-    
-  
-   
-        
-  
-
-
-
-
-
-
-
 //reset function when score===userscore
 
 
