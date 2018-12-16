@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/reset.css" >
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>    <script type="text/javascript" src="assets/javascript/game.js" ></script> 
+    <script type="text/javascript"></script>
     <title>Gem Counter</title>
 </head>
 <body>
@@ -36,20 +38,17 @@
     <br>
     <br>
     <br>
-    <br>
+    <br>  
     <br>
     <div class="gems">
-        <input class="plain" type="image" src="assets/images/16542-200.png" width="200px" height="200px">
-        <input class="yellow" type="image" src="assets/images/49-512.png" width="200px" height="200px">
-        <input class="blue" type="image" src="assets/images/blue_diamond_645294.png" width="200px" height="200px">
-        <input class="red" type="image" src="assets/images/diamond_02-512.png" width="200px" height="200px">
+        <input id="plain" class="gemButton" type="image" src="assets/images/16542-200.png" width="200px" height="200px">
+        <input id="yellow" class="gemButton" type="image" src="assets/images/49-512.png" width="200px" height="200px">
+        <input id="blue" class="gemButton" type="image" src="assets/images/blue_diamond_645294.png" width="200px" height="200px">
+        <input id="red" class="gemButton" type="image" src="assets/images/diamond_02-512.png" width="200px" height="200px">
     </div>
     <div class="scoreOutline">
-        <div class="userScore"></div>
-        User Score: <p></p>
-        <div class="computer"></div>
-        Computer's Number: <p></p>
-        
+        User Score: <p class="userScore"></p>
+        Computer's Number: <p class="computer"></p> 
     </div>
 </body>
 </html>
